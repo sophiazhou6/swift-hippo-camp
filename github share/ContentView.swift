@@ -18,6 +18,7 @@ struct ContentView: View {
         .padding()
         
 //        hi my name is Olla
+        //this is Julie
     }
 }
 
