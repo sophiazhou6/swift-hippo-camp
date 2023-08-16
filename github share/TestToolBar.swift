@@ -13,20 +13,20 @@ struct TestToolBar: View {
                     Text("Dashboard")
                         .navigationBarBackButtonHidden(true)
                         .toolbar {
-                            ToolbarItem(placement: .principal) {
-                                HStack(spacing: 30.0){
-                                    Image("hippo")
-                                    
-                                        .resizable(resizingMode: .stretch)
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 50.0, height: 50.0)
-                                    
-                                    Text("Hippo Camp")
-                                        .font(.title)
-                                }
-                                .padding()
-                                //im still figuring out exact formating
-                            }
+//                            ToolbarItem(placement: .principal) {
+//                                HStack(spacing: 30.0){
+//                                    Image("hippo")
+//
+//                                        .resizable(resizingMode: .stretch)
+//                                        .aspectRatio(contentMode: .fit)
+//                                        .frame(width: 50.0, height: 50.0)
+//
+//                                    Text("Hippo Camp")
+//                                        .font(.title)
+//                                }
+//                                .padding()
+//                                //im still figuring out exact formating
+//                            }
                             ToolbarItemGroup(placement: .bottomBar) {
                                 NavigationLink(destination: ContentView()){
                                     Image("bestHome")
@@ -58,10 +58,11 @@ struct TestToolBar: View {
                                         .frame(width: 30, height: 30)
                                     Text("  ")}
                             }
+                            
+                            
                         }
-                        
                         .navigationBarTitleDisplayMode(.inline)
-                        .toolbarBackground(.pink, for: .navigationBar)
+                        .toolbarBackground(.pink,for:.navigationBar)
                         .toolbarBackground(.visible, for: .navigationBar)
                 }
     }

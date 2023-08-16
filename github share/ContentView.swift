@@ -50,8 +50,6 @@ struct ContentView: View {
                                     .resizable()
                                     .frame(width: 30, height: 30)
                                 Text("     ")
-                                
-                                
                             }
                             Spacer()
                             
@@ -88,6 +86,9 @@ struct ContentView: View {
                             }
                         }
                     }
+                    .navigationBarTitle("")
+                    .navigationBarBackButtonHidden(true)
+                    .navigationBarHidden(true)
         }
     }
         
