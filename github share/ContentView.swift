@@ -14,12 +14,20 @@ struct ContentView: View {
         
             NavigationStack{
                 HStack {
+                    
                     Image("hippo")
+                        
                         .resizable(resizingMode: .stretch)
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 50.0, height: 50.0)
-                        
+                        Spacer()
+                    
                     Text("Hippo Camp")
+                        .font(.title)
+                    Spacer()
+                    Spacer()
+                    
+                        
                 }
                 Color.pink
                 
