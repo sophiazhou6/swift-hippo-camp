@@ -8,9 +8,22 @@
 import SwiftUI
 struct DietItem: View {
     var body: some View {
-        VStack{
-            Text("ex: salmon(a variable would probs go here)")
-            Text("more information about salmon benefit")
+        ZStack{
+            Color(red: 165/255, green: 56/255, blue: 96/255)
+                .ignoresSafeArea()
+            VStack(spacing:20.0){
+                Image("salmon")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(20)
+                Text("Salmon")
+                    .font(.title)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color.white)
+                Text("ex: salmon(a variable would probs go here)")
+                Text("more information about salmon benefits")
+            }
+            .padding()
         }
     }
 }
