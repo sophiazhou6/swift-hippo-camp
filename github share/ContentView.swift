@@ -13,79 +13,83 @@ struct ContentView: View {
         
         
             NavigationStack{
-                HStack {
-                    
-                    Image("hippo")
+                    HStack {
                         
-                        .resizable(resizingMode: .stretch)
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 50.0, height: 50.0)
+                        Image("hippo")
+                        
+                            .resizable(resizingMode: .stretch)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 50.0, height: 50.0)
                         Spacer()
-                    
-                    Text("Hippo Camp")
-                        .font(.title)
-                    Spacer()
-                    Spacer()
-                    
                         
-                }
-                Color.pink
-                
-                
-                ZStack{
-                    
-                }
-                
-                .toolbar {
-                    
-                    ToolbarItemGroup(placement: .status) {
+                        Text("Hippo Camp")
+                            .font(.title)
+                        Spacer()
+                        Spacer()
                         
-                        NavigationLink(destination: ContentView()){
-                            Image("bestHome")
-                                .resizable()
-                                .frame(width: 30, height: 30)
-                            Text("     ")
+                        
+                    }
+                    Color.pink
+                    //Color(red: 255/255, green: 165/255, blue: 171/255)
+                    Text("hi")
+                    
+                    
+                    ZStack{
+                        Text("test")
+                    }
+                    .navigationBarBackButtonHidden(true)
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbarBackground(.pink, for: .navigationBar)
+                    .toolbarBackground(.visible, for: .navigationBar)
+                    .toolbar {
+                        
+                        ToolbarItemGroup(placement: .status) {
+                            
+                            NavigationLink(destination: ContentView()){
+                                Image("bestHome")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                Text("     ")
                                 
-                            
-                        }
-                        Spacer()
-                            
-                        NavigationLink(destination: DietPage()){
-                            Image("diet")
-                                .resizable()
-                                .frame(width: 30, height: 30)
-                            Text("     ")
-                        }
-                        Spacer()
-                        NavigationLink(destination: Text("")){
-                            Image("goodExcercise")
-                                .resizable()
-                                .frame(width: 30, height: 30)
-                            Text("     ")
-                            
-                        }
-                        Spacer()
-                        NavigationLink(destination: Text("")){
-                            Image("games")
-                                .resizable()
-                                .frame(width: 30, height: 30)
-                            Text("     ")
-                            
-                        }
-                        Spacer()
-                        NavigationLink(destination: Text("")){
-                            Image("info")
-                                .resizable()
-                                .frame(width: 30, height: 30)
-                            Text("  ")
                                 
+                            }
+                            Spacer()
                             
+                            NavigationLink(destination: DietPage()){
+                                Image("diet")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                Text("     ")
+                            }
+                            Spacer()
+                            NavigationLink(destination: Text("")){
+                                Image("goodExcercise")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                Text("     ")
+                                
+                            }
+                            Spacer()
+                            NavigationLink(destination: Text("")){
+                                Image("games")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                Text("     ")
+                                
+                            }
+                            Spacer()
+                            NavigationLink(destination: Text("")){
+                                Image("info")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                Text("  ")
+                                
+                                
+                            }
                         }
                     }
-                }
-                
-            }
         }
+    }
         
         
 //        hi my name is Olla
