@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EB405B52A8C7B8B00CC4000 /* DietItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB405B42A8C7B8B00CC4000 /* DietItem.swift */; };
 		B7595CF42A8BE6E100FDFF5E /* github_shareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7595CF32A8BE6E100FDFF5E /* github_shareApp.swift */; };
 		B7595CF62A8BE6E100FDFF5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7595CF52A8BE6E100FDFF5E /* ContentView.swift */; };
 		B7595CF82A8BE6E200FDFF5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7595CF72A8BE6E200FDFF5E /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1EB405B42A8C7B8B00CC4000 /* DietItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietItem.swift; sourceTree = "<group>"; };
 		B7595CF02A8BE6E100FDFF5E /* github share.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "github share.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7595CF32A8BE6E100FDFF5E /* github_shareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = github_shareApp.swift; sourceTree = "<group>"; };
 		B7595CF52A8BE6E100FDFF5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,10 +36,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B7595CE72A8BE6E100FDFF5E = {
+		1EB405B32A8C7B7600CC4000 /* diet */ = {
 			isa = PBXGroup;
 			children = (
 				BDABEF0E2A8C44AD00D3513F /* DietPage.swift */,
+				1EB405B42A8C7B8B00CC4000 /* DietItem.swift */,
+			);
+			path = diet;
+			sourceTree = "<group>";
+		};
+		B7595CE72A8BE6E100FDFF5E = {
+			isa = PBXGroup;
+			children = (
 				B7595CF22A8BE6E100FDFF5E /* github share */,
 				B7595CF12A8BE6E100FDFF5E /* Products */,
 			);
@@ -54,6 +64,7 @@
 		B7595CF22A8BE6E100FDFF5E /* github share */ = {
 			isa = PBXGroup;
 			children = (
+				1EB405B32A8C7B7600CC4000 /* diet */,
 				B7595CF32A8BE6E100FDFF5E /* github_shareApp.swift */,
 				B7595CF52A8BE6E100FDFF5E /* ContentView.swift */,
 				B7595CF72A8BE6E200FDFF5E /* Assets.xcassets */,
@@ -142,6 +153,7 @@
 			files = (
 				B7595CF62A8BE6E100FDFF5E /* ContentView.swift in Sources */,
 				BDABEF0F2A8C44AD00D3513F /* DietPage.swift in Sources */,
+				1EB405B52A8C7B8B00CC4000 /* DietItem.swift in Sources */,
 				B7595CF42A8BE6E100FDFF5E /* github_shareApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
