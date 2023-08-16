@@ -10,30 +10,71 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        ZStack {
-            Color(.systemPink).ignoresSafeArea()
-            Image("rectangle")
-                .resizable(resizingMode: .stretch)
-                .aspectRatio(contentMode: .fill)
+        
+        //        ZStack{
+        //
+        //            Color(.systemPink).ignoresSafeArea()
+        //            Image("rectangle")
+        //                .resizable(resizingMode: .stretch)
+        //.aspectRatio(contentMode: .fill)
+        //
+        //            Text("This is the home page")
+        
+   // }
+        
+        NavigationStack{
+            Color.pink
+            ZStack{
                 
+            }
+            
+            .toolbar {
                 
-           
-//
-//            VStack {
-//                Text("")
-//                    .background(Rectangle().frame(width: 500.0, height: 700.0) .foregroundColor(.white))
-//                ZStack {
-//                    Image("yay")
-//                        .resizable(resizingMode: .stretch)
-//                        .aspectRatio(contentMode: .fit)
-                      
-                //}
-                
-                
-           // }
+                ToolbarItemGroup(placement: .status) {
+                    
+                    NavigationLink(destination: ContentView()){
+                        Image("bestHome")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                        Text("     ")
+                        
+                        
+                    }
+                    Spacer()
+                    NavigationLink(destination: DietPage()){
+                        Image("diet")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                        Text("     ")
+                    }
+                    Spacer()
+                    NavigationLink(destination: Text("")){
+                        Image("goodExcercise")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                        Text("     ")
+                        
+                    }
+                    Spacer()
+                    NavigationLink(destination: Text("")){
+                        Image("games")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                        Text("     ")
+                        
+                    }
+                    Spacer()
+                    NavigationLink(destination: Text("")){
+                        Image("toDoIcon")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                        Text("     ")
+                        
+                    }
+                }
+            }
             
         }
-        
         
         
         
