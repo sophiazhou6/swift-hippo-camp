@@ -10,9 +10,9 @@ import SwiftUI
 struct ExercisePage: View {
     
     @State private var showItem=false
-    @State var healthItems: [healthItem]=[healthItem(name:"walking",imgName:"walking"),
-                                                healthItem(name:"Beans",imgName:"beans"),
-                                                healthItem(name:"MIND Diet",imgName:"mediterranean")]
+    @State var healthItems: [healthItem]=[healthItem(name:"Gardening",imgName:"gardening"),
+                                                healthItem(name:"Walking",imgName:"walking"),
+                                          healthItem(name:"Excercise",imgName:"fitness"),healthItem(name:"Swimming",imgName: "swimming")]
     
     
     @State var index:Int=0
@@ -23,10 +23,10 @@ struct ExercisePage: View {
             Color(red: 255/255, green: 165/255, blue: 171/255)
                 .ignoresSafeArea()
             VStack(spacing:0){
-                Text("Physical Excercises ")
+                Text("Fitness Plans ")
                 HStack{
                     VStack(alignment: .leading, spacing: 10.0) {
-                        Image("walking")
+                        Image("fitness")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .cornerRadius(20)
@@ -40,7 +40,7 @@ struct ExercisePage: View {
                                 //print(foodItems.count)
                             }) {
                                 
-                                Text("Walking")
+                                Text("Aerobic Excercise")
                                     .font(.title)
                                     .fontWeight(.heavy)
                                     .foregroundColor(Color.pink)
@@ -50,7 +50,7 @@ struct ExercisePage: View {
                                 excerciseItem(healthItems:$healthItems,index:$index)
                             }
                         }
-                        Text("Excercise")
+                        Text("Fitness Type")
                     }
                     .padding()
                     .background(Rectangle() .foregroundColor(.white))
@@ -87,7 +87,7 @@ struct ExercisePage: View {
                                     excerciseItem(healthItems:$healthItems,index:$index)
                                 }
                             }
-                            Text("Easy Excercise")
+                            Text("Light Excercise")
                         }
                         .padding()
                         .background(Rectangle() .foregroundColor(.white))
@@ -96,7 +96,7 @@ struct ExercisePage: View {
                         .padding()
                         
                         VStack(alignment: .leading, spacing: 10.0) {
-                            Image("beans")
+                            Image("walking")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width:UIScreen.main.bounds.width*0.3 , height: UIScreen.main.bounds.width*0.3)
@@ -107,7 +107,7 @@ struct ExercisePage: View {
                                     showItem.toggle()
                                 }) {
                                     
-                                    Text("Beans")
+                                    Text("Walking")
                                         .font(.title)
                                         .fontWeight(.heavy)
                                         .foregroundColor(Color.pink)
@@ -116,7 +116,7 @@ struct ExercisePage: View {
                                     excerciseItem(healthItems:$healthItems,index:$index)
                                 }
                             }
-                            Text("Seafood")
+                            Text("Light Excercise")
                         }
                         .padding()
                         .background(Rectangle() .foregroundColor(.white))
@@ -124,18 +124,18 @@ struct ExercisePage: View {
                         .shadow(radius:15)
                         .padding()
                         VStack(alignment: .leading, spacing: 10.0) {
-                            Image("salmon")
+                            Image("swimming")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width:UIScreen.main.bounds.width*0.3 , height: UIScreen.main.bounds.width*0.3)
                                 .cornerRadius(20)
                             HStack{
                                 Button(action: {
-                                    index=1
+                                    index=3
                                     showItem.toggle()
                                 }) {
                                     
-                                    Text("Beans")
+                                    Text("Swimming")
                                         .font(.title)
                                         .fontWeight(.heavy)
                                         .foregroundColor(Color.pink)
@@ -144,7 +144,7 @@ struct ExercisePage: View {
                                     excerciseItem(healthItems:$healthItems,index:$index)
                                 }
                             }
-                            Text("Seafood")
+                            Text("Aerobic activity")
                         }
                         .padding()
                         .background(Rectangle() .foregroundColor(.white))
