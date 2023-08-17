@@ -10,9 +10,6 @@ import SwiftUI
 struct NewToolBar: View {
     var body: some View {
         ZStack{
-//            Image("hippo")
-//            Spacer()
-//            Text("hi")
             VStack{
                 HStack{
                     Image("hippo")
@@ -49,6 +46,7 @@ struct NewToolBar: View {
                         }
                 }
                 .tint(.white) // <- change the color of each tab icon
+                
                 .onAppear {
                     let tabBarAppearance = UITabBarAppearance()
                     tabBarAppearance.backgroundColor = .systemPink

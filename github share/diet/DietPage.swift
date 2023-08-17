@@ -9,21 +9,26 @@ import SwiftUI
 
 struct DietPage: View {
     @State private var showItem=false
-    @State var foodItems: [foodItem]=[]
-    var indexes:[Int]=[0,1,2]
-    var names:[String] = ["Salmon","Beans","MIND diet"]
-    var imgNames:[String] = ["salmon","beans","mediterranean"]
+    @State var foodItems: [foodItem]=[foodItem(name:"salmon",imgName:"salmon"),
+                                      foodItem(name:"Beans",imgName:"beans"),
+                                      foodItem(name:"MIND Diet",imgName:"mediterranean")]
+//    var names:[String] = ["Salmon","Beans","MIND diet"]
+//    var imgNames:[String] = ["salmon","beans","mediterranean"]
 
     @State var index:Int=0
-    init(){
-        
-        for index in indexes{
-            let item = foodItem(index: index,name:names[index],imgName:imgNames[index])
-            foodItems.append(item)
-            //print(item.name)
-        }
-    }
     
+//    init(){
+//
+//        for i in 0...names.count{
+//            let item = foodItem(name:names[i],imgName:imgNames[i])
+//            foodItems.append(item)
+//            //print(item.name)
+//            print(foodItems.count)
+//            print("hi")
+//            print(i)
+//        }
+//    }
+//
     var body: some View {
         
         ZStack{
@@ -44,6 +49,7 @@ struct DietPage: View {
                             Button(action: {
                                 showItem.toggle()
                                 index=2
+                                //print(foodItems.count)
                             }) {
                                 
                                 Text("MIND Diet")
@@ -67,66 +73,113 @@ struct DietPage: View {
                     
                 }
                 Text("Foods")
-                HStack{
-                    VStack(alignment: .leading, spacing: 10.0) {
-                        Image("salmon")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width:UIScreen.main.bounds.width*0.3 , height: UIScreen.main.bounds.width*0.3)
-                            .cornerRadius(20)
-                        HStack{
-                            //                        Text("Salmon")
-                            //                            .font(.title)
-                            //                            .fontWeight(.heavy)
-                            Button(action: {
-                                index=0
-                                showItem.toggle()
-                            }) {
-                                
-                                Text("Salmon")
-                                    .font(.title)
-                                    .fontWeight(.heavy)
-                                    .foregroundColor(Color.pink)
+                ScrollView(.horizontal){
+                    HStack{
+                        VStack(alignment: .leading, spacing: 10.0) {
+                            Image("salmon")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width:UIScreen.main.bounds.width*0.3 , height: UIScreen.main.bounds.width*0.3)
+                                .cornerRadius(20)
+                            HStack{
+                                //                        Text("Salmon")
+                                //                            .font(.title)
+                                //                            .fontWeight(.heavy)
+                                Button(action: {
+                                    index=0
+                                    showItem.toggle()
+                                }) {
+                                    
+                                    Text("Salmon")
+                                        .font(.title)
+                                        .fontWeight(.heavy)
+                                        .foregroundColor(Color.pink)
+                                }
+                                .sheet(isPresented:$showItem){
+                                    DietItem(foodItems:$foodItems,index:$index)
+                                }
                             }
-                            .sheet(isPresented:$showItem){
-                                DietItem(foodItems:$foodItems,index:$index)
+                            Text("Seafood")
+                        }
+                        .padding()
+                        .background(Rectangle() .foregroundColor(.white))
+                        .cornerRadius(15)
+                        .shadow(radius:15)
+                        .padding()
+                        
+                        VStack(alignment: .leading, spacing: 10.0) {
+                            Image("beans")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width:UIScreen.main.bounds.width*0.3 , height: UIScreen.main.bounds.width*0.3)
+                                .cornerRadius(20)
+                            HStack{
+                                Button(action: {
+                                    index=1
+                                    showItem.toggle()
+                                }) {
+                                    
+                                    Text("Beans")
+                                        .font(.title)
+                                        .fontWeight(.heavy)
+                                        .foregroundColor(Color.pink)
+                                }
+                                .sheet(isPresented:$showItem){
+                                    DietItem(foodItems:$foodItems,index:$index)
+                                }
                             }
+                            Text("Seafood")
                         }
-                        Text("Seafood")
-                    }
-                    .padding()
-                    .background(Rectangle() .foregroundColor(.white))
-                    .cornerRadius(15)
-                    .shadow(radius:15)
-                    .padding()
-                    
-                    VStack(alignment: .leading, spacing: 10.0) {
-                        Image("beans")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .cornerRadius(20)
-                            .frame(width:UIScreen.main.bounds.width*0.3, height: UIScreen.main.bounds.width*0.3)
-                        HStack{
-                            Text("Beans")
-                                .font(.title)
-                                .fontWeight(.heavy)
-                                .foregroundColor(Color.pink)
-                            
+                        .padding()
+                        .background(Rectangle() .foregroundColor(.white))
+                        .cornerRadius(15)
+                        .shadow(radius:15)
+                        .padding()
+                        VStack(alignment: .leading, spacing: 10.0) {
+                            Image("salmon")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width:UIScreen.main.bounds.width*0.3 , height: UIScreen.main.bounds.width*0.3)
+                                .cornerRadius(20)
+                            HStack{
+                                Button(action: {
+                                    index=1
+                                    showItem.toggle()
+                                }) {
+                                    
+                                    Text("Beans")
+                                        .font(.title)
+                                        .fontWeight(.heavy)
+                                        .foregroundColor(Color.pink)
+                                }
+                                .sheet(isPresented:$showItem){
+                                    DietItem(foodItems:$foodItems,index:$index)
+                                }
+                            }
+                            Text("Seafood")
                         }
-                        Text("Legume")
+                        .padding()
+                        .background(Rectangle() .foregroundColor(.white))
+                        .cornerRadius(15)
+                        .shadow(radius:15)
+                        .padding()
                     }
-                    .padding()
-                    .background(Rectangle() .foregroundColor(.white))
-                    .cornerRadius(15)
-                    .shadow(radius:15)
-                    .padding()
                 }
             }
             
         }
-        .padding(0)
-        
+
     }
+//    .onAppear {
+//        for i in indexes{
+//            let item = foodItem(index: i,name:names[index],imgName:imgNames[index])
+//            self.foodItems.append(item)
+//            //print(item.name)
+//            print(self.foodItems.count)
+//            print("hi")
+//            print(i)
+//        }
+//    }
     
 }
 struct DietPage_Previews: PreviewProvider {

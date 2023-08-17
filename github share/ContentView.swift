@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     var body: some View {
         Text("home page")
+        
 //         refer to newtoolbar
 //
 //         we can comment out this entire thing
