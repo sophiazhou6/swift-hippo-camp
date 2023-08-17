@@ -18,6 +18,8 @@
 		B7595CF62A8BE6E100FDFF5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7595CF52A8BE6E100FDFF5E /* ContentView.swift */; };
 		B7595CF82A8BE6E200FDFF5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7595CF72A8BE6E200FDFF5E /* Assets.xcassets */; };
 		B7595CFB2A8BE6E200FDFF5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7595CFA2A8BE6E200FDFF5E /* Preview Assets.xcassets */; };
+		BD6B6E0E2A8E7833009753E6 /* healthItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6B6E0D2A8E7833009753E6 /* healthItem.swift */; };
+		BD6B6E102A8E7859009753E6 /* excerciseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6B6E0F2A8E7859009753E6 /* excerciseItem.swift */; };
 		BDABEF0F2A8C44AD00D3513F /* DietPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDABEF0E2A8C44AD00D3513F /* DietPage.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		B7595CF52A8BE6E100FDFF5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B7595CF72A8BE6E200FDFF5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7595CFA2A8BE6E200FDFF5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BD6B6E0D2A8E7833009753E6 /* healthItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthItem.swift; sourceTree = "<group>"; };
+		BD6B6E0F2A8E7859009753E6 /* excerciseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = excerciseItem.swift; sourceTree = "<group>"; };
 		BDABEF0E2A8C44AD00D3513F /* DietPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +85,8 @@
 				B7595CF32A8BE6E100FDFF5E /* github_shareApp.swift */,
 				B7595CF52A8BE6E100FDFF5E /* ContentView.swift */,
 				1E1A7DC62A8D91B300EFF10F /* ExercisePage.swift */,
+				BD6B6E0F2A8E7859009753E6 /* excerciseItem.swift */,
+				BD6B6E0D2A8E7833009753E6 /* healthItem.swift */,
 				1E1A7DC82A8D91BE00EFF10F /* GamesPage.swift */,
 				1E1A7DCA2A8D91CC00EFF10F /* InfoPage.swift */,
 				1EB405B62A8D53D300CC4000 /* SwiftUIView.swift */,
@@ -171,7 +177,9 @@
 			files = (
 				1E1A7DCB2A8D91CC00EFF10F /* InfoPage.swift in Sources */,
 				1E1A7DC52A8D8CAD00EFF10F /* NewToolBar.swift in Sources */,
+				BD6B6E0E2A8E7833009753E6 /* healthItem.swift in Sources */,
 				B7595CF62A8BE6E100FDFF5E /* ContentView.swift in Sources */,
+				BD6B6E102A8E7859009753E6 /* excerciseItem.swift in Sources */,
 				1E1A7DC72A8D91B300EFF10F /* ExercisePage.swift in Sources */,
 				1E1A7DCD2A8DCFF700EFF10F /* foodItem.swift in Sources */,
 				BDABEF0F2A8C44AD00D3513F /* DietPage.swift in Sources */,
