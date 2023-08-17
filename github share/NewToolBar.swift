@@ -27,6 +27,7 @@ struct NewToolBar: View {
                         .tabItem {
                             Label("Home", systemImage: "house")
                         }
+                        .padding(0)
                        
                     DietPage()
                         .tabItem {

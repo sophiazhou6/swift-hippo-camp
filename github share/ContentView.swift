@@ -8,96 +8,41 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var toDoItems: [ToDoItem] = []
+    @State private var showNewTask = false
     var body: some View {
-        Text("home page")
         
-//         refer to newtoolbar
-//
-//         we can comment out this entire thing
-//                    NavigationStack{
-//                            HStack {
-//
-//                                Image("hippo")
-//
-//                                    .resizable(resizingMode: .stretch)
-//                                    .aspectRatio(contentMode: .fit)
-//                                    .frame(width: 50.0, height: 50.0)
-//                                Spacer()
-//
-//                                Text("Hippo Camp")
-//                                    .font(.title)
-//                                Spacer()
-//                                Spacer()
-//
-//
-//                            }
-//                            Color.pink
-//                            //Color(red: 255/255, green: 165/255, blue: 171/255)
-//                            Text("hi")
-//
-//
-//                            ZStack{
-//                                Text("test")
-//                            }
-//                            .navigationBarBackButtonHidden(true)
-//                            .navigationBarTitleDisplayMode(.inline)
-//                            .toolbarBackground(.pink, for: .navigationBar)
-//                            .toolbarBackground(.visible, for: .navigationBar)
-//                            .toolbar {
-//
-//                                ToolbarItemGroup(placement: .status) {
-//
-//                                    NavigationLink(destination: ContentView()){
-//                                        Image("bestHome")
-//                                            .resizable()
-//                                            .frame(width: 30, height: 30)
-//                                        Text("     ")
-//                                    }
-//                                    Spacer()
-//
-//                                    NavigationLink(destination: DietPage()){
-//                                        Image("diet")
-//                                            .resizable()
-//                                            .frame(width: 30, height: 30)
-//                                        Text("     ")
-//                                    }
-//                                    Spacer()
-//                                    NavigationLink(destination: Text("")){
-//                                        Image("goodExcercise")
-//                                            .resizable()
-//                                            .frame(width: 30, height: 30)
-//                                        Text("     ")
-//
-//                                    }
-//                                    Spacer()
-//                                    NavigationLink(destination: Text("")){
-//                                        Image("games")
-//                                            .resizable()
-//                                            .frame(width: 30, height: 30)
-//                                        Text("     ")
-//
-//                                    }
-//                                    Spacer()
-//                                    NavigationLink(destination: Text("")){
-//                                        Image("info")
-//                                            .resizable()
-//                                            .frame(width: 30, height: 30)
-//                                        Text("  ")
-//
-//
-//                                    }
-//                                }
-//                            }
-//                            //.navigationBarTitle("")
-//                            .navigationBarBackButtonHidden(true)
-//                            .navigationBarHidden(true)
-//                }
+        ZStack{
+            Color(red:248/255,green:157/255,blue:173/255)
+                .ignoresSafeArea()
+            VStack{
+                Text("Welcome to Hippo Camp! See your To-Do List Below:")
+                Spacer()
+                Button(action: {
+                    self.showNewTask = true
+                }) {
+                Text("+")
+                        .font(.largeTitle)
+                        .foregroundColor(.pink)
+                }
+                
+                List {
+                    ForEach (toDoItems) { toDoItem in
+                        Text(toDoItem.title)
+                    }
+                    
+                }
+                
             }
-        
-        
-//                hi my name is Olla
-//        this is Julie
+            if showNewTask {
+                NewToDoView(toDoItems: $toDoItems, showNewTask: $showNewTask, title: "")
+                    }
+        }
+       
     }
+
+
+}
     
     
     struct ContentView_Previews: PreviewProvider {
