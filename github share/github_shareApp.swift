@@ -11,7 +11,8 @@ import SwiftUI
 struct github_shareApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+            NewToolBar()
         }
     }
 }

@@ -20,6 +20,8 @@ struct NewToolBar: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 50.0, height: 50.0)
                     Text("Hippo Camp")
+                        .font(.title)
+                        .foregroundColor(.white)
                 }
                 .frame(maxWidth: .infinity)
                 .background(Color.pink)
@@ -28,6 +30,7 @@ struct NewToolBar: View {
                         .tabItem {
                             Label("Home", systemImage: "house")
                         }
+                       
                     DietPage()
                         .tabItem {
                             Label("Diet", systemImage: "fork.knife")
