@@ -8,27 +8,35 @@
 import SwiftUI
 
 struct SwiftUIView: View {
+    
+// need a full screen to be able to do this
     var body: some View {
-        NavigationStack{
-            
-            ZStack{
-                //Color(red: 255/255, green: 165/255, blue: 171/255)
-                    //.ignoresSafeArea()
-                HStack {
-                    
-                    Image("hippo")
-                    
-                        .resizable(resizingMode: .stretch)
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 50.0, height: 50.0)
-                    Spacer()
-                    
-                    //Text("Hippo Camp")
-                        //.font(.title)
-                    Spacer()
-                    Spacer()
+            NavigationStack {
+                VStack{
+                    List(0..<1) {
+                    Text("Row \($0)")
                 }
+                    //Text("test")
+                    
+                }
+                .frame(maxHeight: .infinity, alignment: .center)
+                .padding(.vertical, 1) // note top 1 padding!
+                .background(.purple)
                 .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        HStack(spacing: 30.0){
+                            Image("hippo")
+
+                                .resizable(resizingMode: .stretch)
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 50.0, height: 50.0)
+
+                            Text("Hippo Camp")
+                                .font(.title)
+                        }
+                        .padding()
+                        //im still figuring out exact formating
+                    }
                     ToolbarItemGroup(placement: .bottomBar) {
                         NavigationLink(destination: ContentView()){
                             Image("bestHome")
@@ -60,12 +68,12 @@ struct SwiftUIView: View {
                                 .frame(width: 30, height: 30)
                             Text("  ")}
                     }
+                    
+                    
                 }
+                .navigationTitle("Hippo Camp")
             }
         }
-        .navigationTitle("Hippo Camp")
-        //.toolbarBackground(Color.pink, for: .toolbar)
-    }
 }
 
 struct SwiftUIView_Previews: PreviewProvider {

@@ -7,6 +7,7 @@
 
 import SwiftUI
 struct DietItem: View {
+    @State var addToList=false
     var body: some View {
         ZStack{
             Color(red: 165/255, green: 56/255, blue: 96/255)
@@ -22,6 +23,14 @@ struct DietItem: View {
                     .foregroundColor(Color.white)
                 Text("ex: salmon(a variable would probs go here)")
                 Text("more information about salmon benefits")
+                Button(action: {
+                    addToList=true
+                }) {
+
+                    Text("Add to To Do List")
+                        .font(.title)
+                        .fontWeight(.heavy)
+                }
             }
             .padding()
         }

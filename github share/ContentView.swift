@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+
     var body: some View {
         
+        // refer to newtoolbar
         
-        
+        // we can comment out this entire thing
             NavigationStack{
                     HStack {
                         
@@ -86,7 +88,7 @@ struct ContentView: View {
                             }
                         }
                     }
-                    .navigationBarTitle("")
+                    //.navigationBarTitle("")
                     .navigationBarBackButtonHidden(true)
                     .navigationBarHidden(true)
         }
