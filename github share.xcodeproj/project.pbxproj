@@ -13,7 +13,6 @@
 		1E1A7DCB2A8D91CC00EFF10F /* InfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A7DCA2A8D91CC00EFF10F /* InfoPage.swift */; };
 		1E1A7DCD2A8DCFF700EFF10F /* foodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A7DCC2A8DCFF700EFF10F /* foodItem.swift */; };
 		1E1A7DCF2A8E95EC00EFF10F /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A7DCE2A8E95EC00EFF10F /* ToDoItem.swift */; };
-		1E1A7DD12A8E96CA00EFF10F /* oldNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A7DD02A8E96CA00EFF10F /* oldNavBar.swift */; };
 		1E1A7DD52A8E98CE00EFF10F /* NewToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1A7DD42A8E98CE00EFF10F /* NewToDoView.swift */; };
 		1EB405B52A8C7B8B00CC4000 /* DietItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB405B42A8C7B8B00CC4000 /* DietItem.swift */; };
 		1EB405B72A8D53D300CC4000 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB405B62A8D53D300CC4000 /* SwiftUIView.swift */; };
@@ -33,7 +32,6 @@
 		1E1A7DCA2A8D91CC00EFF10F /* InfoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPage.swift; sourceTree = "<group>"; };
 		1E1A7DCC2A8DCFF700EFF10F /* foodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodItem.swift; sourceTree = "<group>"; };
 		1E1A7DCE2A8E95EC00EFF10F /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
-		1E1A7DD02A8E96CA00EFF10F /* oldNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oldNavBar.swift; sourceTree = "<group>"; };
 		1E1A7DD42A8E98CE00EFF10F /* NewToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDoView.swift; sourceTree = "<group>"; };
 		1EB405B42A8C7B8B00CC4000 /* DietItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietItem.swift; sourceTree = "<group>"; };
 		1EB405B62A8D53D300CC4000 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				1E1A7DC82A8D91BE00EFF10F /* GamesPage.swift */,
 				1E1A7DCA2A8D91CC00EFF10F /* InfoPage.swift */,
 				1EB405B62A8D53D300CC4000 /* SwiftUIView.swift */,
-				1E1A7DD02A8E96CA00EFF10F /* oldNavBar.swift */,
 				1E1A7DC42A8D8CAD00EFF10F /* NewToolBar.swift */,
 				B7595CF72A8BE6E200FDFF5E /* Assets.xcassets */,
 				B7595CF92A8BE6E200FDFF5E /* Preview Content */,
@@ -190,7 +187,6 @@
 				BD6B6E0E2A8E7833009753E6 /* healthItem.swift in Sources */,
 				B7595CF62A8BE6E100FDFF5E /* ContentView.swift in Sources */,
 				BD6B6E102A8E7859009753E6 /* excerciseItem.swift in Sources */,
-				1E1A7DD12A8E96CA00EFF10F /* oldNavBar.swift in Sources */,
 				1E1A7DC72A8D91B300EFF10F /* ExercisePage.swift in Sources */,
 				1E1A7DCD2A8DCFF700EFF10F /* foodItem.swift in Sources */,
 				BDABEF0F2A8C44AD00D3513F /* DietPage.swift in Sources */,
