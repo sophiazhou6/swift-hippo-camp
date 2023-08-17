@@ -18,6 +18,7 @@ struct NewToolBar: View {
                         .frame(width: 50.0, height: 50.0)
                     Text("Hippo Camp")
                         .font(.title)
+                        .fontWeight(.bold)
                         .foregroundColor(.white)
                 }
                 .frame(maxWidth: .infinity)
