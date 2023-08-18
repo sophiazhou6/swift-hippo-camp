@@ -31,7 +31,7 @@ struct ContentView: View {
                     .fontWeight(.light)
                     
                    // .foregroundColor(Color(red: 218/255, green: 98/255, blue: 125/255))
-                Text("\(test.items.count)")
+                //Text("\(test.items.count)")
                 Text((textSwitch ? "Explore our website to find preventative measures. Then add them to your Personal To-Do List!" : "Did you know more than 1 in 9 Seniors will develop a form of Dementia?"))
                     .multilineTextAlignment(.center)
                     .padding()
