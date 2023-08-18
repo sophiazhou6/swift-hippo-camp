@@ -7,7 +7,6 @@
 
 import Foundation
 class ToDoItem: ObservableObject {
-    var id = UUID()
     //@Published var title = ""
     @Published var items:[String]
     init()

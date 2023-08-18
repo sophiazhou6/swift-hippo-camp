@@ -9,9 +9,10 @@ import SwiftUI
 
 struct DietPage: View {
     @State private var showItem=false
-    @State var foodItems: [foodItem]=[foodItem(name:"salmon",imgName:"salmon"),
+    @State var foodItems: [foodItem]=[foodItem(name:"Fish",imgName:"salmon"),
                                       foodItem(name:"Beans",imgName:"beans"),
-                                      foodItem(name:"MIND Diet",imgName:"mediterranean")]
+                                      foodItem(name:"MIND Diet",imgName:"mediterranean"),
+                                      foodItem(name:"Leafy Greens",imgName:"leafygreen")]
 //    var names:[String] = ["Salmon","Beans","MIND diet"]
 //    var imgNames:[String] = ["salmon","beans","mediterranean"]
 
@@ -108,18 +109,18 @@ struct DietPage: View {
                         .padding()
                         
                         VStack(alignment: .leading, spacing: 10.0) {
-                            Image("beans")
+                            Image("leafygreen")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width:UIScreen.main.bounds.width*0.3 , height: UIScreen.main.bounds.width*0.3)
                                 .cornerRadius(20)
                             HStack{
                                 Button(action: {
-                                    index=1
+                                    index=3
                                     showItem.toggle()
                                 }) {
                                     
-                                    Text("Beans")
+                                    Text("Leafy Greens")
                                         .font(.title)
                                         .fontWeight(.heavy)
                                         .foregroundColor(Color.pink)
@@ -128,7 +129,7 @@ struct DietPage: View {
                                     DietItem(foodItems:$foodItems,index:$index)
                                 }
                             }
-                            Text("Seafood")
+                            Text("Vegetable")
                         }
                         .padding()
                         .background(Rectangle() .foregroundColor(.white))

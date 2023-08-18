@@ -24,7 +24,7 @@ struct NewToDoView: View {
 
             .padding()
             Button(action: {
-                self.addTask(title: self.title)
+                //self.addTask(title: self.title)
 //                instead of the user typing in what they want, we want specific text to appear (Can we put text in the action part the button that will appear on the HOME PAGE when the user clicks a button) Almost like a user is adding something to their cart?
                 
                 //Example:
@@ -34,9 +34,6 @@ struct NewToDoView: View {
                 //Swimming would be added to the To-Do list after user clicks button on the Swimming View
                
                 //Alternitive Idea: User can select from a dropdown list of pre-written options to add to their "To-Do" list
-                
-                
-                
             }) {
                 Text("Add")
                     .foregroundColor(.pink)
@@ -44,11 +41,6 @@ struct NewToDoView: View {
             .padding()
         }
     }
-    public func addTask(title: String, isImportant: Bool = false) {
-            
-            let task = ToDoItem(title: title)
-            toDoItems.append(task)
-        }
 }
 
 struct NewToDoView_Previews: PreviewProvider {
