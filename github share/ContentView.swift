@@ -20,19 +20,19 @@ struct ContentView: View {
         ZStack{
             Color(red:248/255,green:157/255,blue:173/255)
                 .ignoresSafeArea()
-    
-                 
+            
+            
             VStack(spacing: 20){
-
-           Text("Welcome to Hippo Camp! I'm Holly the Hippo, and I am here to guide you on your health journey!")
+                
+                Text("Welcome to Hippo Camp! I'm Holly the Hippo, and I am here to guide you on your health journey!")
                     .contentShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                     .hoverEffect(.lift)
                     .multilineTextAlignment(.center)
                     .fontWeight(.light)
-                    
-                   // .foregroundColor(Color(red: 218/255, green: 98/255, blue: 125/255))
+                
+                // .foregroundColor(Color(red: 218/255, green: 98/255, blue: 125/255))
                 //Text("\(test.items.count)")
-                Text((textSwitch ? "Explore our website to find preventative measures. Then add them to your Personal To-Do List!" : "Did you know more than 1 in 9 Seniors will develop a form of Dementia?"))
+                Text((textSwitch ? "Explore our app to find preventative measures." : "Did you know more than 1 in 9 Seniors will develop a form of Dementia?"))
                     .multilineTextAlignment(.center)
                     .padding()
                     .onAppear {
@@ -40,39 +40,112 @@ struct ContentView: View {
                             self.textSwitch.toggle()
                         }
                     }
-                  //  .foregroundColor(Color(red: 218/255, green: 98/255, blue: 125/255))
-                   // .background(Color(red: 249/255, green: 219/255, blue: 189/255, opacity: 1.0))
+                //  .foregroundColor(Color(red: 218/255, green: 98/255, blue: 125/255))
+                // .background(Color(red: 249/255, green: 219/255, blue: 189/255, opacity: 1.0))
                 Spacer()
-                Button(action: {
-                    self.showNewTask = true
-                }) {
-                Text("+")
-                        .font(.largeTitle)
-                        .foregroundColor(.pink)
-                }
                 
-//                List {
-//                    ForEach (toDoItems) { toDoItem in
-//                        Text(toDoItem.title)
-//                    }
-//                    
-//                }
-                
-            }
-            if showNewTask {
-//                NewToDoView(toDoItems: $toDoItems, showNewTask: $showNewTask, title: "")
+                Text("Explore Below")
+                ScrollView(.horizontal){
+                    HStack{
+                        VStack(alignment: .leading, spacing: 10.0) {
+                            Image("salmon")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width:UIScreen.main.bounds.width*0.3 , height: UIScreen.main.bounds.width*0.3)
+                                .cornerRadius(20)
+                            HStack{
+                                //                        Text("Salmon")
+                                //                            .font(.title)
+                                //                            .fontWeight(.heavy)
+                                Button(action: {
+                                    
+                                }) {
+                                    
+                                    Text("Salmon")
+                                        .font(.title)
+                                        .fontWeight(.heavy)
+                                        .foregroundColor(Color.pink)
+                                }
+                                
+                            }
+                            Text("Seafood")
+                        }
+                        .padding()
+                        .background(Rectangle() .foregroundColor(.white))
+                        .cornerRadius(15)
+                        .shadow(radius:15)
+                        .padding()
+                        
+                        VStack(alignment: .leading, spacing: 10.0) {
+                            Image("swimming")
+                                .resizable()
+                                .frame(width:UIScreen.main.bounds.width*0.4, height: UIScreen.main.bounds.width*0.3)
+                                .cornerRadius(20)
+                            HStack{
+                                Button(action: {
+                                    
+                                }) {
+                                    
+                                    Text("Swimming")
+                                        .font(.title)
+                                        .fontWeight(.heavy)
+                                        .foregroundColor(Color.pink)
+                                }
+                                
+                            }
+                            Text("Aerobic Excercise")
+                        }
+                        .padding()
+                        .background(Rectangle() .foregroundColor(.white))
+                        .cornerRadius(15)
+                        .shadow(radius:15)
+                        .padding()
+                        VStack(alignment: .leading, spacing: 10.0) {
+                            Image("gardening")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width:UIScreen.main.bounds.width*0.3 , height: UIScreen.main.bounds.width*0.3)
+                                .cornerRadius(20)
+                            HStack{
+                                Button(action: {
+                                    
+                                }) {
+                                    
+                                    Text("Gardening")
+                                        .font(.title)
+                                        .fontWeight(.heavy)
+                                        .foregroundColor(Color.pink)
+                                }
+                                
+                            }
+                            Text("Fun Excercise")
+                        }
+                        .padding()
+                        .background(Rectangle() .foregroundColor(.white))
+                        .cornerRadius(15)
+                        .shadow(radius:15)
+                        .padding()
                     }
+                }
+            }
+            
+            //                List {
+            //                    ForEach (toDoItems) { toDoItem in
+            //                        Text(toDoItem.title)
+            //                    }
+            //
+            //                }
+            
         }
-       
+        
     }
-
-
-}
     
+}
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()
         }
     }
+    
 

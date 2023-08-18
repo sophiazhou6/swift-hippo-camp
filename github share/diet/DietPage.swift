@@ -136,7 +136,7 @@ struct DietPage: View {
                         .shadow(radius:15)
                         .padding()
                         VStack(alignment: .leading, spacing: 10.0) {
-                            Image("salmon")
+                            Image("beans")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width:UIScreen.main.bounds.width*0.3 , height: UIScreen.main.bounds.width*0.3)
@@ -156,7 +156,7 @@ struct DietPage: View {
                                     DietItem(foodItems:$foodItems,index:$index)
                                 }
                             }
-                            Text("Seafood")
+                            Text("Legume")
                         }
                         .padding()
                         .background(Rectangle() .foregroundColor(.white))
