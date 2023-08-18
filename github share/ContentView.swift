@@ -13,7 +13,7 @@ struct ContentView: View {
     @State private var showNewTask = false
     @State private var textSwitch = false
     //@Binding public var items:[String]
-    @StateObject var test=ToDoItem()
+    @EnvironmentObject var test:ToDoItem
     
     var body: some View {
         
@@ -31,7 +31,7 @@ struct ContentView: View {
                     .fontWeight(.light)
                     
                    // .foregroundColor(Color(red: 218/255, green: 98/255, blue: 125/255))
-                
+                Text("\(test.items.count)")
                 Text((textSwitch ? "Explore our website to find preventative measures. Then add them to your Personal To-Do List!" : "Did you know more than 1 in 9 Seniors will develop a form of Dementia?"))
                     .multilineTextAlignment(.center)
                     .padding()
@@ -60,7 +60,7 @@ struct ContentView: View {
                 
             }
             if showNewTask {
-                NewToDoView(toDoItems: $toDoItems, showNewTask: $showNewTask, title: "")
+//                NewToDoView(toDoItems: $toDoItems, showNewTask: $showNewTask, title: "")
                     }
         }
        

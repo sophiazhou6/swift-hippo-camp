@@ -111,8 +111,7 @@ struct DietPage: View {
                         VStack(alignment: .leading, spacing: 10.0) {
                             Image("leafygreen")
                                 .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width:UIScreen.main.bounds.width*0.3 , height: UIScreen.main.bounds.width*0.3)
+                                .frame(width:UIScreen.main.bounds.width*0.5, height: UIScreen.main.bounds.width*0.3)
                                 .cornerRadius(20)
                             HStack{
                                 Button(action: {

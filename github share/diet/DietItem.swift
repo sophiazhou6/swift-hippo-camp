@@ -11,7 +11,7 @@ struct DietItem: View {
     @Binding var foodItems: [foodItem]
     @Binding var index:Int
     @State public var items:[String]=[]
-    @EnvironmentObject var test: ToDoItem
+    @StateObject var test = ToDoItem()
     var body: some View {
         ZStack{
             Color(red: 165/255, green: 56/255, blue: 96/255)
@@ -79,6 +79,8 @@ struct DietItem: View {
                 }
             }
             .padding()
+            .environmentObject(test)
+            
         }
     }
     public func addTask(title: String) {

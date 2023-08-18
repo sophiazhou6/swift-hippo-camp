@@ -8,7 +8,7 @@
 import Foundation
 class ToDoItem: ObservableObject {
     //@Published var title = ""
-    @Published var items:[String]
+    @Published public var items:[String]
     init()
     {
         items=[]
