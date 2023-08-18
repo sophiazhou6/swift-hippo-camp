@@ -21,8 +21,9 @@ struct NewToolBar: View {
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                 }
+            
                 .frame(maxWidth: .infinity)
-                .background(Color(red: 1.0, green: 0.0, blue: 0.0, opacity: 1.0))
+                .background(Color(red: 249/255, green: 219/255, blue: 189/255, opacity: 1.0))
                 TabView {
                     ContentView()
                         .tabItem {
