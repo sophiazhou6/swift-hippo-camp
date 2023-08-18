@@ -21,7 +21,7 @@ struct NewToolBar: View {
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                 }
-            
+                
                 .frame(maxWidth: .infinity)
                 .background(Color(red: 249/255, green: 219/255, blue: 189/255, opacity: 1.0))
                 TabView {
@@ -49,14 +49,15 @@ struct NewToolBar: View {
                         }
                 }
                 .tint(.white) // <- change the color of each tab icon
-                
+                .frame(maxHeight:.infinity)
                 .onAppear {
                     let tabBarAppearance = UITabBarAppearance()
                     tabBarAppearance.backgroundColor = .systemPink
                     UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
                 }
             }
-        }
+
+        }.padding(0)
         
     }
 }

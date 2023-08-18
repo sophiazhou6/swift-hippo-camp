@@ -6,12 +6,16 @@
 //
 
 import Foundation
-class ToDoItem: Identifiable {
+class ToDoItem: ObservableObject {
     var id = UUID()
-    @Published var title = ""
-    
-    init(title: String)
+    //@Published var title = ""
+    @Published var items:[String]
+    init()
     {
-        self.title = title
+        items=[]
+    }
+    func addItem(name:String) {
+        items.append(name)
     }
 }
+
