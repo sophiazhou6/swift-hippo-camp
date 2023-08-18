@@ -17,7 +17,7 @@ struct ContentView: View {
         ZStack{
             Color(red:248/255,green:157/255,blue:173/255)
                 .ignoresSafeArea()
-            padding(-12)
+    
                  
             VStack(spacing: 20){
 
